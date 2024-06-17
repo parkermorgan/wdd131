@@ -3,54 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Parker Morgan</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Parker Morgan. This is the home page for week 1.">
+    <title>Document</title>
+    <meta name="description" content="WDD 131-Dynamic Web Fundamentals-Parker Morgan-Home page assignment for week 1">
     <meta name="author" content="Parker Justin Morgan">
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <div class="header-content">WDD 131: Dynamic Web Fundamentals - Parker Justin Morgan</div>
+        <h1>WDD 131:Dynamic Web Fundamentals-Parker J. Morgan</h1>
     </header>
         <nav>
-            <ul class="nav-menu">
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+            <ul>
+                <li><a href="https://www.linkedin.com/">Linkedin</a></li>
                 <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng">Scripture</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p34#p34/">Scripture</a></li>
                 <li><a href="#">Final Project</a></li>
-            </ul>
+            </ul> 
         </nav>
     
-    <main>
-        <div class="content">
+        <main>
             <section class="card">
-                <h2>About Me</h2>
-                <div id="about-me-content">
-                    <p>My name is Parker and I'm a Software Engineering major at BYU-Idaho. I'm from Vancouver, Washington but currently live in Rexburg with my wife, Shelby. I currently work at the Faculty Technology Center on campus, helping all members of faculty with any Canvas issues they have.</p>
-                    <img src="images/bridge_photo.jpg" alt="Parker and Shelby on the Cress Creek bridge">
-                </div>
-                <h3>Vancouver, Washington</h3>
-                <hr>
-                <div class="washington-image">
-                    <img src="images/washington.jpg">
-                    <p class="washington-text">Vancouver, WA</p>
-                </div>
-                <p class="lower-text">I lived in Vancouver my whole life till I left for school in Rexburg. My parents moved to Provo in January 2023 so I haven't been back to Vancouver since my wedding because I have no family left there. Me and my wife hope to move to Irvine, California when I am done with school.</p>
+                <section class="about">
+                    <h2>About Me</h2>
+                    <div class="aboutme">
+                        <p>My name is Parker. I was born in Vancouver, Washington and currently live in Rexburg with my wife Shelby. My major is Software Engineering and I work at the Faculty Technology Center on campus. I love playing piano, singing, and building Legos.</p>
+                        <img src="images/bridge_photo.jpg" alt="Picture of Parker and Shelby on bridge">
+                    </div>
+                </section>
+                <section class="vancouver">
+                    <h2>Vancouver, Washington</h2>
+                    <div class="city">
+                        <img src="images/washington.jpg" alt="Picture of Vancouver">
+                        <p>Vancouver is located on the Washington-Oregon border along the Columbia River, directly north of Portland. It's very green and has many beautiful hikes and trails both in and around the city.  </p>
+                        
+                    </div>
+                </section>
             </section>
             <section class="card">
-                <h2>Useful Links</h2>
-                <ul>
-                    <li><a href="https://disneyland.disney.go.com/">Disney Website</a></li>
-                    <li><a href="https://www.lego.com/en-us">Lego Website</a></li>
-                    <li><a href="https://www.starwars.com/">Star Wars Website</a></li>
-                </ul>
+                <section class="resources">
+                    <h2>Resource Links</h2>
+                        <ul class="link-list">
+                           <li><a href="https://simple.wikipedia.org/wiki/Vancouver,_Washington">More about Vancouver</a></li> 
+                            <li><a href="https://www.youtube.com/channel/UCkDSAQ_5-yx5hmuvUcsJL7A">My favorite Youtubers</a></li>
+                            <li><a href="https://jobs.disneycareers.com/search-jobs?acm=ALL&alrpm=ALL&ascf=[%7B%22key%22:%22is_manager%22,%22value%22:%22Disney+Internships%22%7D]">Internship opportunities</a></li>
+                        </ul>
+                    </nav>
+                </section>
             </section>
-           </main>
+        </main>
     <footer>
         <p>&copy; <span id="currentyear"><script src="scripts/getdates.js"></script></span> | Parker Morgan | Washington, USA</p>
         <p id="lastModified"><script src="scripts/getdates.js"></script></p>
     </footer>
-</div>
-    <script src="jetdates.js"></script>
 </body>
 </html>
