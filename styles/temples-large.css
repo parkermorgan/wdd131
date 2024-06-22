@@ -15,6 +15,9 @@
         color: #fff;
     }
     
+    .navLinks li {
+        margin-right: 10px;
+    }
     
     .navLinks a {
         color: #fff;
@@ -45,6 +48,7 @@
         gap: 1.5rem;
     }
     
+ 
     #menu {
         display: none;
     }
