@@ -13,6 +13,7 @@
         display: flex;
         list-style: none;
         color: #fff;
+        flex-direction: row;
     }
     
     .navLinks li {
