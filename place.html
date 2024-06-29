@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131-Seattle Washington-Parker Morgan</title>
     <meta name="author" content="Parker Morgan">
-    <meta name="description" content="Website that displaysinformation regarding a country, using both data and weather statistics, along with an image, header, and footer.">
+    <meta name="description" content="Website that displays information regarding Seattle, Washington, using both data and weather statistics, along with an image, header, and footer.">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
 
@@ -28,42 +28,38 @@
                     <source  srcset="images/seattle-medium.webp" media="(min-width: 600px)">
                     <img src="images/seattle-small.webp" alt="Seattle" width="500" height="750">
                 </picture>
-            </div>
-            <section id="data">
-                <h2>Data</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li>Area:</li>
-                    <li>83.78 mi²</li>
-                    <li>Population:</li>
-                    <li>749,256</li>
-                    <li>Language</li>
-                    <li>English</li>
-                    <li>Currency</li>
-                    <li>American Dollar</li>
-                    <li>Time Zone</li>
-                    <li>PDT</li>
-                    <li>Area Code</li>
-                    <li>206</li>
-                    <li>Internet TLD:</li>
-                    <li>.us</li>
-                </ul>
-            </section>
-            <section id="weather">
-                <h2 class="weather">Weather</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li>Temperature:</li>
-                    <li>70°F</li>
-                    <li>Conditions:</li>
-                    <li>Sunny</li>
-                    <li>Wind:</li>
-                    <li>2 mph</li>
-                    <li id="wind-chill">Value</li>
-                </ul>
-            </section>                
+                <div class="overlay" id="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li>Area:</li>
+                        <li>83.78 mi²</li>
+                        <li>Population:</li>
+                        <li>749,256</li>
+                        <li>Language</li>
+                        <li>English</li>
+                        <li>Currency</li>
+                        <li>American Dollar</li>
+                        <li>Time Zone:</li>
+                        <li>PDT</li>
+                        <li>Area Code:</li>
+                        <li>206</li>
+                        <li>Internet TLD:</li>
+                        <li>.us</li>
+                    </ul>
+                </div>
+                <div class="overlay" id="weather">
+                    <h2 class="weather">Weather</h2>
+                    <ul>
+                        <li>Temperature:</li>
+                        <li>70°F</li>
+                        <li>Conditions:</li>
+                        <li>Sunny</li>
+                        <li>Wind:</li>
+                        <li>2 mph</li>
+                        <li id="wind-chill">Value</li>
+                    </ul>
+                </div>
+            </div>              
         </main>
         <footer>
             <p>&copy; <span id="currentyear"></span> | Parker Morgan | Washington, USA</p>

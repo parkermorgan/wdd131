@@ -1,22 +1,24 @@
 @media screen and (min-width: 900px) {
-    #content{
-        grid-template-rows: 10em 30em 10em;
+    #content {
+        grid-template-rows: auto 1fr auto;
     }
+
     main {
-        grid-row: 2/4;
+        position: relative;
         display: grid;
-        grid-template-columns: 1.3em 21.3em auto 17.5em 1.2em;
-        grid-template-rows: 2.6em 17.9em 7.5em 9.5em auto;
+        grid-template-columns: 1fr 1fr;
     }
+
     #hero {
-        grid-column: 1/-1;
-        grid-row: 1/-1;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        display: flex;
     }
-    section {
-        backdrop-filter: blur(4px);
-        background-color: #ffffffcc;
-        border-bottom: unset;
-        box-shadow: var(--b) 1px 1px 20px 1px;
-        padding: 0;
+
+    .overlay {
+        width: auto;
+        padding: 2rem;
+        font-size: 1.2em;
     }
+    
 }
