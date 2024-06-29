@@ -1,0 +1,22 @@
+@media screen and (min-width: 900px) {
+    #content{
+        grid-template-rows: 10em 30em 10em;
+    }
+    main {
+        grid-row: 2/4;
+        display: grid;
+        grid-template-columns: 1.3em 21.3em auto 17.5em 1.2em;
+        grid-template-rows: 2.6em 17.9em 7.5em 9.5em auto;
+    }
+    #hero {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+    section {
+        backdrop-filter: blur(4px);
+        background-color: #ffffffcc;
+        border-bottom: unset;
+        box-shadow: var(--b) 1px 1px 20px 1px;
+        padding: 0;
+    }
+}
