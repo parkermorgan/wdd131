@@ -54,23 +54,21 @@
         
     }
     .weather_head {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
+        
         position: relative;
-        top: -1.5rem; /* Adjust as needed to position above the box */
+        top: -2rem; /* Adjust as needed to position above the box */
         left: -1.5rem; /* Adjust as needed to position to the left */
         background-color: #2f5035;
         color: white;
         padding-right: 100px;
         text-align: left;
-        padding-top: 10px;
         padding-bottom: 10px;
         padding-left:20px;
         /* border-radius: 0.5rem; */
         box-shadow: 0 0 10px #333;
         
     }
+    
 
     .overlay ul {
         display: grid;
@@ -96,6 +94,13 @@
     .overlay li:nth-child(even) {
         grid-column-start: 2;
         text-align: left;
+    }
+
+    .sunny-svg {
+        display: none;
+    }
+    .icon{
+        display: inline;
     }
     
 }
