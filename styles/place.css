@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --primary-color: #2f5035;
+    --secondary-color: #ffffff;
+    --header-padding: 2rem;
+    --overlay-bg-color: rgba(255, 255, 255, 0.8);
+    --overlay-font-size: 1.2em;
+}
 body {
     font-family: "Open+Sans", sans-serif;
     display: flex;
