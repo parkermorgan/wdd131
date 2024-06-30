@@ -3,7 +3,7 @@
     --secondary-color: #ffffff;
     --header-padding: 2rem;
     --overlay-bg-color: rgba(255, 255, 255, 0.8);
-    --overlay-font-size: 1.2em;
+    --overlay-font-size: 1em;
     --icon-size: 80px; /* New variable for icon size */
 }
 
