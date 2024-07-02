@@ -9,13 +9,18 @@
     background-color: rgb(49, 49, 49);
     color:White;
     padding:1rem;
-    padding-bottom: 80px;
+    padding-bottom:35px;
 }
 .navigation {
     background-color: black;
     padding: 1rem;
     display:flex;
     align-items: center;
+}
+.header {
+    text-align: center;
+    padding-top:40px;
+    font-size: 2rem;
 }
 .navigation a {
 	display:block;
@@ -89,4 +94,5 @@ footer {
     background-color:rgb(49, 49, 49) ;
     padding:1rem;
     color:white;
+    padding-bottom:50px;
 }
