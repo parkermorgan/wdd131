@@ -1,5 +1,7 @@
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navLinks');
+const gallery = document.querySelector('.gallery');
+const title = document.querySelector('main h2');
 
 hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
@@ -88,3 +90,72 @@ const temples = [
 		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rexburg-idaho/400x250/rexburg-temple-776440-wallpaper.jpg"
 	},
   ];
+  function renderTemples(filteredTemples) {
+	gallery.innerHTML = '';
+	filteredTemples.forEach(temple => {
+		const card = document.createElement('div');
+		card.classList.add('card');
+
+		const cardContent = document.createElement('div');
+		cardContent.classList.add('card-content');
+
+		const figcaption = document.createElement('figcaption');
+		const img = document.createElement('img');
+
+		figcaption.innerHTML = `
+			<h3>${temple.templeName}</h3>
+			<div><span>Location:</span> ${temple.location}</div>
+			<div><span>Dedicated:</span> ${temple.dedicated}</div>
+			<div><span>Area:</span> ${temple.area} sq ft</div>
+		`;
+
+		img.src = temple.imageUrl;
+		img.alt = temple.templeName;
+		img.loading = 'lazy';
+		img.width = 320;
+		img.height = 200;
+
+		cardContent.appendChild(figcaption);
+		card.appendChild(cardContent);
+		card.appendChild(img);
+		gallery.appendChild(card);
+	});
+}
+
+renderTemples(temples);
+
+navigation.addEventListener('click', (event) => {
+	if (event.target.tagName === 'A') {
+		event.preventDefault();
+
+		let filteredTemples;
+		let filterName = event.target.textContent;
+		switch (event.target.dataset.filter) {
+			case 'old':
+				filteredTemples = temples.filter(temple => {
+					const dedicatedDate = new Date(temple.dedicated);
+					return dedicatedDate.getFullYear() < 1900;
+				});
+				break;
+			case 'new':
+				filteredTemples = temples.filter(temple => {
+					const dedicatedDate = new Date(temple.dedicated);
+					return dedicatedDate.getFullYear() > 2000;
+				});
+				break;
+			case 'large':
+				filteredTemples = temples.filter(temple => temple.area > 90000);
+				break;
+			case 'small':
+				filteredTemples = temples.filter(temple => temple.area < 10000);
+				break;
+			default:
+				filteredTemples = temples;
+				filterName = 'Home';
+				break;
+		}
+
+		renderTemples(filteredTemples);
+		title.textContent = filterName;
+	}
+});

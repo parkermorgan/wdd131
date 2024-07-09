@@ -6,6 +6,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    margin:0;
 }
 
 /* Header */
@@ -95,4 +96,77 @@ h2 {
 
 .open a {
     display: block;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 1rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card img {
+    width: calc(100% - 2rem); 
+    height: auto;
+    display: block;
+    margin: 1rem;
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2.6); 
+    max-width: 100%;
+}
+figcaption {
+    color: #000;
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
+    font-family: 'roboto', sans-serif;
+}
+@media only screen and (max-width: 600px) {
+    .nav-links a {
+      font-size: 1.2rem;
+    }
+  
+    .nav-links li:last-child {
+      padding-bottom: 1.3rem; 
+    }
+  }
+
+
+  @media (max-width: 800px) and (max-width: 1024px){
+    .nav-links a {
+        font-size: 1.2rem;
+      }
+  }
+
+  @media (max-width: 800px) and (max-width: 1024px){
+    figcaption {
+        font-size: 1.3rem;
+      }
+  }
+
+  @media (max-width: 600px) {
+    header {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    h1.title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 320px;
+        margin: 0 auto; 
+    }
 }
