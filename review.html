@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submission</title>
+    <script>
+        // Function to increment and display the review counter
+        function incrementReviewCounter() {
+            // Retrieve current counter value from localStorage
+            let counter = localStorage.getItem('reviewCounter');
+            
+            // If counter is null (first time), initialize it to 0
+            if (!counter) {
+                counter = 0;
+            } else {
+                counter = parseInt(counter); // Convert string to number
+            }
+            
+            // Increment the counter
+            counter++;
+            
+            // Update localStorage with the new counter value
+            localStorage.setItem('reviewCounter', counter);
+            
+            // Display the counter value
+            document.getElementById('reviewCount').textContent = counter;
+        }
+
+        // Call incrementReviewCounter on page load
+        window.onload = function() {
+            incrementReviewCounter();
+        };
+    </script>
+</head>
+<body>
+    <h1>Review Submission Successful</h1>
+    <p>You have submitted your review. Thank you!</p>
+    <p>Number of reviews completed: <span id="reviewCount"></span></p>
+</body>
+</html>

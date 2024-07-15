@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="author" content="Parker Morgan">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="form_header">
+        <div>
+            <h1>Product Review</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="reviewForm" method="get" action="review.html">
+                <label for="productName">Product Name <span class=required>*</span></label><br>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product:</option>
+                </select><br><br>
+
+                <label>Overall Rating <span class=required>*</span></label><br>
+                <div class="stars">
+                    <input type="radio" id="1star" name="rating" value="1" required>
+                    <label for="1star">★</label>
+                    <input type="radio" id="2star" name="rating" value="2" required>
+                    <label for="2star">★★</label>
+                    <input type="radio" id="3star" name="rating" value="3" required>
+                    <label for="3star">★★★</label>
+                    <input type="radio" id="4star" name="rating" value="4" required>
+                    <label for="4star">★★★★</label>
+                    <input type="radio" id="5star" name="rating" value="5" required>
+                    <label for="5star">★★★★★</label>
+                </div><br>
+                
+                <label for="installationDate">Date of Installation <span class=required>*</span></label><br>
+                <input type="date" id="installationDate" name="installationDate" required><br><br>
+
+                <label>Which of the following features did you find useful about the product? <small>(Check all that apply)</small></label><br>
+                <div class="features">
+                    <input type="checkbox" id="durability" name="features" value="Durability">
+                    <label for="durability">Durability</label><br>
+                    <input type="checkbox" id="easeofuse" name="features" value="Easeofuse">
+                    <label for="easeofuse">Ease of use</label><br>
+                    <input type="checkbox" id="performance" name="features" value="Performance">
+                    <label for="performance>">Performance</label><br>
+                    <input type="checkbox" id="design" name="features" value="Design">
+                    <label for="design">Design</label><br>
+                </div>
+
+                <label for="review">Written Review <small>(Optional)</small></label><br>
+                <textarea id="review" name="review"></textarea><br><br>
+
+                <label for="yourName">Your Name <small>(Optional)</small></label><br>
+                <input type="text" id="yourName" name="yourName"><br><br>
+
+                <input type="submit" value="Post Review">
+            </form>
+        </div>
+    </main>
+    <div class="footer">
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Parker Morgan | Washington, USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+</body>
+</html>
