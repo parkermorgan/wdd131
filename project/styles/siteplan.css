@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #211eadde;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+    color: white;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.card h3 {
+    text-align: left;
+}
+
+.card h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.card {
+    background-color: rgba(230, 222, 222, 0.637);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #333;
+    line-height: 1.75rem;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.scenario-p {
+    padding-bottom: 10px;
+}
+
+.scenario-list {
+    margin-left: 30px;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #999;
+    padding: 10px;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+    padding: 1.5rem;
+}
+
+.primary {
+    background-color: #211eadde;
+    color: white;
+    text-align: center;
+}
+
+.secondary {
+    background-color: #e6dedea2;
+    text-align: center;
+}
+
+.accent {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.typography {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h4 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.wire_header {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.wireframes {
+    text-align: center;
+}
+
+.wireframes h3 {
+    margin: 30px;
+}
+.wireframe-desktop{
+    width: 100%;
+}
+
+.footer {
+    background-color: #211eadde;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    line-height: 35px;
+    font-size: 20px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
