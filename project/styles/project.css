@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #284572;
+    --text-color: white;
+    --box-shadow-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +16,13 @@ body {
 
 /* Header */
 header {
-    background-color: #211eadde;
+    background-color: var(--primary-color);
     display: grid;
     grid-gap: 1rem;
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
-    color: white;
+    box-shadow: 0 0 30px var(--box-shadow-color);
+    color: var(--text-color);
 }
 
 /* Main Content */
@@ -29,8 +35,8 @@ main {
 
 /* Footer */
 .footer {
-    background-color: #211eadde;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1rem;
     line-height: 35px;
@@ -47,7 +53,7 @@ main {
     font-size: 2rem;
     border: 0;
     background: none;
-    color: white;
+    color: var(--text-color);
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -63,23 +69,53 @@ main {
 
 /* Navigation Links */
 .navLinks {
-	display: none;
-	flex-direction: column;
-	list-style: none;
-	color: #fff;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    color: var(--text-color);
     font-size: 1rem;
 }
+
 .navLinks.open {
-    display:flex;
+    display: flex;
 }
 
-.navLinks a{
+.navLinks a {
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .open a {
     display: block;
+}
+.grid-container1 {
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+
+
+}
+
+.item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--box-shadow-color);
+}
+
+.grid-container2 {
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+
 }

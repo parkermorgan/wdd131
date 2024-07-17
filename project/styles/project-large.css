@@ -1,67 +1,104 @@
 @media screen and (min-width: 700px) {
-    #menu {
-        display:none;
+    :root {
+        --primary-color: #284572;
+        --text-color: #fff;
+        --box-shadow-color: #333;
     }
+
+    #menu {
+        display: none;
+    }
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
+    body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;    
+    }
+
     .navLinks {
         display: flex;
         list-style: none;
-        color: #fff;
+        color: var(--text-color);
         flex-direction: row;
     }
+
     .navLinks li {
         margin-right: 10px;
     }
-    
+
     .navLinks a {
-        color: #fff;
+        color: var(--text-color);
         text-align: center;
         padding: 0.5rem 1rem;
         text-decoration: none;
         font-size: 1.5em;
     }
+
     .navLinks a:hover {
         text-decoration: underline;
     }
+
     header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #211eadde;
+        background-color: var(--primary-color);
         padding: 20px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 0 30px #333;
+        box-shadow: 0 0 30px var(--box-shadow-color);
     }
+
     .grid-container1 {
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         padding: 20px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        height:75%
+
+
     }
+
     .item {
-        background-color: #211eadde;
+        background-color: var(--primary-color);
         color: white;
         padding: 20px;
         text-align: center;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 0 10px #333;
-
+        box-shadow: 0 0 10px var(--box-shadow-color);
     }
+
     .grid-container2 {
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         padding: 20px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
+        height: 75%;
     }
+
     main {
         height: 80vh;
+        max-width: 2000px;
+        margin: 0 auto;
+
     }
-      
-    
+    .footer {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 1rem;
+        line-height: 35px;
+        font-size: 20px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        
+    }
 }
