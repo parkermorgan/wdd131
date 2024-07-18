@@ -1,43 +1,57 @@
-document.querySelector("#currentyear").innerHTML = `${new Date().getFullYear()}`;
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelector("#lastModified").innerHTML = `Last Modification: ${document.lastModified}`
+  document.querySelector("#currentyear").innerHTML = `${new Date().getFullYear()}`;
+  document.querySelector("#lastModified").innerHTML = `Last Modification: ${document.lastModified}`;
 
-// Select the <select> element by its id
-const selectElement = document.getElementById('productName');
+ 
+  const form = document.getElementById('contactForm');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const subjectInput = document.getElementById('subject');
+  const messageInput = document.getElementById('message');
 
-// Array of products
-const products = [
-    {
-      id: 'fc-1888',
-      name: "flux capacitor",
-      avgRating: 4.5
-    },
-    {
-      id: 'fc-2050',
-      name: "power laces",
-      avgRating: 4.7
-    },
-    {
-      id: 'fs-1987',
-      name: "time circuits",
-      avgRating: 3.5
-    },
-    {
-      id: 'ac-2000',
-      name: "low voltage reactor",
-      avgRating: 3.9
-    },
-    {
-      id: 'jj-1969',
-      name: "warp equalizer",
-      avgRating: 5.0
-    }
-];
+  
+  loadFormData();
 
-// Populate the <select> element with options
-products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.id;  // Set the value attribute of <option>
-    option.textContent = product.name;  // Set the text content of <option>
-    selectElement.appendChild(option);  // Append <option> to <select>
+  
+  form.addEventListener('submit', handleSubmit);
+
+ 
+  function handleSubmit(event) {
+      event.preventDefault(); 
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const subject = subjectInput.value.trim();
+      const message = messageInput.value.trim();
+
+      if (name === '' || email === '' || subject === '' || message === '') {
+          alert('Please fill out all required fields.');
+          return;
+      }
+
+     
+      saveFormData({ name, email, subject, message });
+
+      
+      alert('Message sent successfully!');
+
+      
+      form.reset();
+  }
+
+  function saveFormData(data) {
+      localStorage.setItem('contactFormData', JSON.stringify(data));
+  }
+  
+  function loadFormData() {
+      const savedData = localStorage.getItem('contactFormData');
+      if (savedData) {
+          const { name, email, subject, message } = JSON.parse(savedData);
+          nameInput.value = name || '';
+          emailInput.value = email || '';
+          subjectInput.value = subject || '';
+          messageInput.value = message || '';
+      }
+  }
 });
