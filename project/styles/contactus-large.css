@@ -1,0 +1,44 @@
+/* Media query for desktop */
+@media screen and (min-width: 700px) {
+    .footer {
+        margin-top: 90px;
+        left: 0;
+        bottom: 0;
+    }
+    #menu {
+        display: none;
+    }
+    .navLinks {
+        display: flex;
+        list-style: none;
+        color: var(--text-color);
+        flex-direction: row;
+    }
+
+    .navLinks li {
+        margin-right: 10px;
+    }
+
+    .navLinks a {
+        color: var(--text-color);
+        text-align: center;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    .navLinks a:hover {
+        text-decoration: underline;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 30px var(--box-shadow-color);
+    }
+
+}

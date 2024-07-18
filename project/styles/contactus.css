@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #284572;
+    --text-color: white;
+    --box-shadow-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +16,14 @@ body {
 }
 
 /* Header */
-.form_header {
-    background-color: #284572;
+header {
+    background-color: var(--primary-color);
     display: grid;
     grid-gap: 1rem;
-    padding: 20px;
+    padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
-    color: white;
-    text-align: center;
+    box-shadow: 0 0 30px var(--box-shadow-color);
+    color: var(--text-color);
 }
 
 main {
@@ -39,14 +44,7 @@ main {
     margin-top: 2rem;
 }
 
-/* Media query for desktop */
-@media (min-width: 1024px) {
-    .footer {
-        margin-top: 90px;
-        left: 0;
-        bottom: 0;
-    }
-}
+
 
 .container {
     background-color: rgba(230, 222, 222, 0.637);
@@ -58,7 +56,7 @@ main {
 }
 
 .required {
-    color: #284572;
+    color: 284572;
 }
 
 label {
@@ -94,4 +92,45 @@ input[type="submit"]:hover {
 textarea {
     height: 150px;
     resize: vertical;
+}
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: var(--text-color);
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕";
+}
+
+/* Navigation Links */
+.navLinks {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.navLinks.open {
+    display: flex;
+}
+
+.navLinks a {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.open a {
+    display: block;
 }
