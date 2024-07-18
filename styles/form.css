@@ -50,7 +50,7 @@ main {
     padding-bottom: 2rem; 
 }
 .required {
-    color:red;
+    color:#380d5cde;
 }
 label {
     font-weight: bold;
