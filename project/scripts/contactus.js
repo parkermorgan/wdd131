@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#currentyear").innerHTML = `${new Date().getFullYear()}`;
   document.querySelector("#lastModified").innerHTML = `Last Modification: ${document.lastModified}`;
 
- 
+
   const form = document.getElementById('contactForm');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
