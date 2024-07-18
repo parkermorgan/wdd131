@@ -67,13 +67,27 @@
         color: white;
         padding: 20px;
         text-align: center;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 3px solid rgba(0, 0, 0, 0.1);
         box-shadow: 0 0 10px var(--box-shadow-color);
     }
 
     .item1  {
-        border: 5px solid black;
-        background-color: white;
+        border: 3px solid black;
+        background-color: rgb(204, 204, 202);
+        color:black;
+    }
+
+    .item1 h1{
+        text-align: center;
+        margin: 10px;
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+
+    .item1 p {
+        font-size: 1.4rem;
+        text-align: left;
+        line-height: 1.7;
     }
 
     
