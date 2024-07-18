@@ -1,58 +1,5 @@
 @media screen and (min-width: 700px) {
-    :root {
-        --primary-color: #284572;
-        --text-color: #fff;
-        --box-shadow-color: #333;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;    
-    }
-
-    .navLinks {
-        display: flex;
-        list-style: none;
-        color: var(--text-color);
-        flex-direction: row;
-    }
-
-    .navLinks li {
-        margin-right: 10px;
-    }
-
-    .navLinks a {
-        color: var(--text-color);
-        text-align: center;
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-        font-size: 1.5em;
-    }
-
-    .navLinks a:hover {
-        text-decoration: underline;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--primary-color);
-        padding: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 0 30px var(--box-shadow-color);
-    }
-
+   
     .grid-container1 {
         display: grid;
         gap: 2rem;
@@ -117,7 +64,7 @@
         margin-bottom: 100px;
 
     }
-    .footer {
+    .project_footer {
         background-color: var(--primary-color);
         color: var(--text-color);
         text-align: center;

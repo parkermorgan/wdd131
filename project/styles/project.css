@@ -34,7 +34,7 @@ main {
 }
 
 /* Footer */
-.footer {
+.project_footer {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
