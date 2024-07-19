@@ -13,7 +13,8 @@
 
     body {
         margin: 0;
-        font-family: "Roboto", sans-serif;    
+        font-family: "Roboto", sans-serif;
+        margin-bottom:500px;    
     }
 
     .footer {
@@ -103,10 +104,16 @@
 
     .item img {
         width: 100%;
-        height:100%
+        height: 100%;
     }
 
+    .captainrex {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0
 
+    }
     .grid-container2 {
         display: grid;
         gap: 2rem;
@@ -129,7 +136,7 @@
         padding: 1rem;
         line-height: 35px;
         font-size: 20px;
-        position: fixed;
+        position:fixed;
         left: 0;
         bottom: 0;
         width: 100%;

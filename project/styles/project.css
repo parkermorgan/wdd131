@@ -98,6 +98,7 @@ main {
     grid-template-rows: auto;
 }
 
+
 .item {
     background-color: var(--primary-color);
     color: white;
@@ -113,6 +114,17 @@ main {
     padding: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+}
+
+.grid-container2 .item {
+    width: 75%;
+    margin:auto;
+    transition: transform 0.2s ease;
+}
+
+.grid-container2 .item:hover {
+    transform: scale(1.1);
+
 }
 .item img {
     width:100%;
