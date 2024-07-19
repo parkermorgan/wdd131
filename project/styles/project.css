@@ -12,43 +12,25 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    background-color: #d4d0d0;
 }
 
 /* Header */
 header {
     background-color: var(--primary-color);
-    display: grid;
-    grid-gap: 1rem;
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 30px var(--box-shadow-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Main Content */
-main {
-    padding: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+header h1 {
+    margin-bottom: 0.5rem;
 }
 
-/* Footer */
-.project_footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 1rem;
-    line-height: 35px;
-    font-size: 20px;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-/* Menu Button */
 #menu {
     font-size: 2rem;
     border: 0;
@@ -90,24 +72,56 @@ main {
 .open a {
     display: block;
 }
-.grid-container1 {
-    display: grid;
-    gap: 1rem;
-    padding: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+
+/* Main Content */
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
-.item {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
+.notable {
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.grid-container1 {
+    display: grid;
+    gap: 2rem;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px, auto); /* Ensure items have a consistent minimum height */
+    grid-auto-rows: minmax(200px, auto);
+    margin-bottom: 1rem;
+}
+
+.main-photo img {
+    width: 100%;
+    height: auto;
     box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
+.about {
+    grid-row: 2;
+    padding: 20px;
+    background-color: rgb(214, 213, 213);
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    width: 100%;
+}
+
+.about h1 {
+    text-align: center;
+    padding:1rem;
+}
+
+.about p {
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+/* Cards */
 .grid-container2 {
     display: grid;
     gap: 1rem;
@@ -116,31 +130,74 @@ main {
     grid-template-rows: auto;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(214, 213, 213);
+    color: black;
+    margin: 20px;
+    padding: 1rem;
+    text-align: center;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-title {
+    margin: 1rem;
+}
+
+.card-p {
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.clone {
+    width: 60%; /* Adjust the size of the image */
+    height: 50%; /* Make the image take up 50% of the card */
+    border: 2px solid black; /* Add a small black border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    margin: 0 auto; /* Center the image */
+    margin-top: 1rem;
+}
+
+.card-text {
+    flex: 1; /* Make the text take up the remaining 50% of the card */
+    margin: 1rem;
+    text-align: center;
+}
 .grid-container2 .item {
     width: 75%;
-    margin:auto;
-    transition: transform 0.2s ease;
+    margin: auto;
 }
 
 .grid-container2 .item:hover {
     transform: scale(1.1);
-
-}
-.item img {
-    width:100%;
-    height:100%;
 }
 
-.item2 {
-    padding: 0px;
-    grid-row: 1;
+/* Footer */
+.project_footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    line-height: 35px;
+    font-size: 20px;
+    width: 100%;
 }
 
 .review a {
     text-decoration: none;
-    color:white;
+    color: var(--text-color);
 }
 
 .review:hover {
     text-decoration: underline;
 }
+
