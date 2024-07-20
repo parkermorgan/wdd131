@@ -182,7 +182,7 @@ main {
 }
 
 /* Footer */
-.project_footer {
+footer {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
