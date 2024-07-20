@@ -106,7 +106,7 @@ main {
 .about {
     grid-row: 2;
     padding: 20px;
-    background-color: rgb(214, 213, 213);
+    background-color: rgb(233, 233, 233);
     border: 5px solid var(--primary-color);
     box-shadow: 0 0 10px var(--box-shadow-color);
     width: 100%;
@@ -134,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(214, 213, 213);
+    background-color: rgb(233, 233, 233);
     color: black;
     margin: 20px;
     padding: 1rem;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="author" content="Parker Morgan">
+    <meta name="description" content="This is the HTML for the CloneCollective photo gallery.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/gallery-large.css">
+    <script src="scripts/gallery.js" defer></script>
+
+</head>
+<body>
+    <div id="flex-container">
+        <header>
+            <h1>Photo Gallery</h1>
+            <nav class="navigation">
+                <button id="menu"></button>
+                <ul class="navLinks">
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="#" data-filter="all">All</a></li>
+                    <li><a href="#" data-filter="501">501st</a></li>
+                    <li><a href="#" data-filter="222">222nd</a></li>
+                    <li><a href="#" data-filter="badbatch">The Bad Batch</a></li>
+                </ul>
+            </nav>  
+        </header>
+        <main>
+            <h2>All</h2>
+            <div class="gallery">
+            </div>
+        </main>
+            <footer>
+                <p>&copy; <span id="currentyear"></span> | Parker Morgan | Washington, USA</p>
+                <p id="lastModified"></p>
+            </footer>
+    </div>
+</body>
+</html>
